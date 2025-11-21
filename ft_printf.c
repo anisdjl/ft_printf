@@ -6,7 +6,7 @@
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 09:39:01 by adjelili          #+#    #+#             */
-/*   Updated: 2025/11/21 14:57:21 by adjelili         ###   ########.fr       */
+/*   Updated: 2025/11/21 17:00:49 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,11 @@ int	ft_printf(const char *format, ...)
 	return (count);
 }
 
+#include <stdio.h>
 int main(void)
 {
 	//ft_printf("%d\n", 42);
-	ft_printf("%d\n %s\n %c", -42, "hello", 'y');
+	ft_printf("%d", ft_printf("%s", "hello"));
+	//printf("%u", 4294967295);
 	return (0);
 }

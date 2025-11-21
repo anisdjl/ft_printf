@@ -1,6 +1,11 @@
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
-SRC = #faut mettre les fichiers
+SRC = ft_print_char.c \
+      ft_print_int.c \
+	  ft_print_uint.c \
+	  ft_printf.c \
+	  ft_test_format.c \
+	  ft_print_str.c 
 OBJ = $(SRC:.c=.o)
 NAME = libftprintf.a
 
