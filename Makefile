@@ -5,7 +5,7 @@ SRC = ft_print_char.c \
 	  ft_print_uint.c \
 	  ft_printf.c \
 	  ft_test_format.c \
-	  ft_print_str.c 
+	  ft_print_str.c
 OBJ = $(SRC:.c=.o)
 NAME = libftprintf.a
 
@@ -14,7 +14,7 @@ all : $(NAME)
 $(NAME) : $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
-%.o = %.c
+%.o : %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean : $(OBJ)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_test_format.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anis <anis@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 10:40:41 by adjelili          #+#    #+#             */
-/*   Updated: 2025/11/21 16:41:17 by adjelili         ###   ########.fr       */
+/*   Updated: 2025/11/21 22:01:14 by anis             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ int	ft_test_format(char c, va_list args)
 		return (ft_print_uint(va_arg(args, unsigned int)));
 	// else if (c == 'x' || c == 'X')
 	// 	return (ft_print_hex(va_arg(args, char)));
-	// else if (c == '%')
-	// 	return (ft_print_char('%'));
+	else if (c == '%')
+	 	return (ft_print_char('%'));
 	// else if (c == 'p')
 	// 	return (ft_print_ptr(va_arg(args, int)));
 	// else

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anis <anis@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 09:39:01 by adjelili          #+#    #+#             */
-/*   Updated: 2025/11/21 17:00:49 by adjelili         ###   ########.fr       */
+/*   Updated: 2025/11/21 23:10:40 by anis             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,11 @@ int	ft_printf(const char *format, ...)
 	return (count);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 int main(void)
 {
 	//ft_printf("%d\n", 42);
-	ft_printf("%d", ft_printf("%s", "hello"));
+	ft_printf("%d", ft_printf("%%"));
 	//printf("%u", 4294967295);
 	return (0);
-}
+}*/
