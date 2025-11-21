@@ -6,7 +6,7 @@
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 15:18:51 by adjelili          #+#    #+#             */
-/*   Updated: 2025/11/20 15:19:35 by adjelili         ###   ########.fr       */
+/*   Updated: 2025/11/20 15:45:54 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 int	ft_print_char(char c)
 {
-	write(1, c, 1);
+	write(1, &c, 1);
 	return (1);
 }

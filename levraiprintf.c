@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   levraiprintf.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/20 10:41:51 by adjelili          #+#    #+#             */
-/*   Updated: 2025/11/21 14:13:56 by adjelili         ###   ########.fr       */
+/*   Created: 2025/11/20 16:29:05 by adjelili          #+#    #+#             */
+/*   Updated: 2025/11/21 14:40:57 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-# define PRINTF_H
+#include <stdio.h>
 
-# include <unistd.h>
-# include <stdarg.h>
-# include <stdint.h>
-
-int	ft_print_int(int n);
-int	ft_test_format(char c, va_list args);
-int	ft_printf(const char *s, ...);
-int	ft_print_char(char c);
-int	ft_print_str(char *str);\
-int	ft_print_uint(unsigned int n);
-
-#endif
+int main(void)
+{
+	int a = 42;
+	int *p = &a;
+	char c = 'a';
+	char str[] = "hello";
+	int y = -55;
+	unsigned int b = y;
+	
+	printf("pointer %p\n", p);
+	printf("integer %d\n", a);
+	printf("char %c\n", c);
+	printf("string %s\n", str);
+	printf("hex min %x\n", a);
+	printf("hex %X\n", a);
+	printf("le pourcentage %%\n");
+	printf("%r\n");
+	printf("%u\n", 42);
+	printf("%u", b);
+	
+}
