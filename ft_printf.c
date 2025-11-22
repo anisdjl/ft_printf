@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anis <anis@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 09:39:01 by adjelili          #+#    #+#             */
-/*   Updated: 2025/11/21 23:10:40 by anis             ###   ########.fr       */
+/*   Updated: 2025/11/22 15:56:08 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_printf(const char *format, ...)
 {
@@ -31,8 +31,8 @@ int	ft_printf(const char *format, ...)
 		else
 		{
 			write(1, &format[y], 1);
-			count++;
 		}
+		count++;
 		y++;
 	}
 	va_end(args);
@@ -41,9 +41,7 @@ int	ft_printf(const char *format, ...)
 
 /*#include <stdio.h>
 int main(void)
-{
-	//ft_printf("%d\n", 42);
-	ft_printf("%d", ft_printf("%%"));
-	//printf("%u", 4294967295);
+{	
+	ft_printf("\n%d", ft_printf("%r "));
 	return (0);
 }*/

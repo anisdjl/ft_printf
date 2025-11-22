@@ -6,11 +6,11 @@
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 15:18:51 by adjelili          #+#    #+#             */
-/*   Updated: 2025/11/20 15:45:54 by adjelili         ###   ########.fr       */
+/*   Updated: 2025/11/22 15:22:38 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_print_char(char c)
 {

@@ -6,11 +6,11 @@
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 09:24:38 by adjelili          #+#    #+#             */
-/*   Updated: 2025/11/21 11:17:14 by adjelili         ###   ########.fr       */
+/*   Updated: 2025/11/22 15:22:32 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 static int	ft_count(int n)
 {
@@ -28,7 +28,7 @@ static int	ft_count(int n)
 		return (count + 1);
 }
 
-int ft_print_int(int n)
+int	ft_print_int(int n)
 {
 	long	nb;
 

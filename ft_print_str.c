@@ -6,16 +6,21 @@
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/21 10:17:48 by adjelili          #+#    #+#             */
-/*   Updated: 2025/11/21 10:22:39 by adjelili         ###   ########.fr       */
+/*   Updated: 2025/11/22 15:22:12 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_print_str(char *str)
 {
 	int	y;
 
+	if (!str)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
 	y = 0;
 	while (str[y])
 	{

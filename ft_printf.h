@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 10:41:51 by adjelili          #+#    #+#             */
-/*   Updated: 2025/11/21 14:13:56 by adjelili         ###   ########.fr       */
+/*   Updated: 2025/11/22 15:22:00 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-# define PRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <unistd.h>
 # include <stdarg.h>
@@ -21,7 +21,9 @@ int	ft_print_int(int n);
 int	ft_test_format(char c, va_list args);
 int	ft_printf(const char *s, ...);
 int	ft_print_char(char c);
-int	ft_print_str(char *str);\
+int	ft_print_str(char *str);
 int	ft_print_uint(unsigned int n);
+int	ft_print_hex(unsigned int n, char c);
+int	ft_print_ptr(void *p);
 
 #endif

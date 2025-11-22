@@ -1,47 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_uint.c                                    :+:      :+:    :+:   */
+/*   ft_print_ptr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/21 14:09:58 by adjelili          #+#    #+#             */
-/*   Updated: 2025/11/22 15:37:46 by adjelili         ###   ########.fr       */
+/*   Created: 2025/11/22 14:15:31 by adjelili          #+#    #+#             */
+/*   Updated: 2025/11/22 15:22:18 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_count(unsigned int n)
+static void	ft_phex(unsigned long p, char *base, int *count)
 {
-	int	count;
-
-	count = 0;
-	while (n != 0)
+	if (p < 16)
 	{
-		n = n / 10;
-		count++;
-	}
-	return (count);
-}
-
-int	ft_print_uint(unsigned int n)
-{
-	if (n >= 10)
-	{
-		ft_print_uint(n / 10);
-		ft_print_uint(n % 10);
+		ft_print_char(base[p]);
+		*(count) = *(count) + 1;
 	}
 	else
-		ft_print_char(n + '0');
-	return (ft_count(n));
+	{
+		ft_phex(p / 16, base, count);
+		ft_phex(p % 16, base, count);
+	}
 }
 
-/*#include <stdio.h>
-
-int main(void)
+int	ft_print_ptr(void *p)
 {
-	printf("%u\n", ft_print_uint(-42));
-	printf("%u", -42);
-	return (0);
-}*/
+	char	*base;
+	int		count;
+
+	count = 0;
+	base = "0123456789abcdef";
+	if (!p)
+	{
+		write (1, "(nil)", 5);
+		return (5);
+	}
+	write(1, "0x", 2);
+	ft_phex((unsigned long)p, base, &count);
+	return (count + 2);
+}
