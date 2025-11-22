@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anis <anis@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 10:41:51 by adjelili          #+#    #+#             */
-/*   Updated: 2025/11/22 15:22:00 by adjelili         ###   ########.fr       */
+/*   Updated: 2025/11/22 22:02:59 by anis             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <stdint.h>
 
 int	ft_print_int(int n);
-int	ft_test_format(char c, va_list args);
+int	ft_test_format(char c, va_list *args);
 int	ft_printf(const char *s, ...);
 int	ft_print_char(char c);
 int	ft_print_str(char *str);
