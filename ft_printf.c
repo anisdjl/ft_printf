@@ -6,7 +6,7 @@
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 09:39:01 by adjelili          #+#    #+#             */
-/*   Updated: 2025/11/22 15:56:08 by adjelili         ###   ########.fr       */
+/*   Updated: 2025/11/22 17:58:37 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,22 +26,22 @@ int	ft_printf(const char *format, ...)
 		if (format[y] == '%')
 		{
 			y++;
-			count = ft_test_format(format[y], args);
+			count += ft_test_format(format[y], args);
 		}
 		else
 		{
 			write(1, &format[y], 1);
+			count += 1;
 		}
-		count++;
 		y++;
 	}
 	va_end(args);
 	return (count);
 }
 
-/*#include <stdio.h>
-int main(void)
-{	
-	ft_printf("\n%d", ft_printf("%r "));
-	return (0);
-}*/
+// #include <stdio.h>
+// int main(void)
+// {	
+// 	ft_printf("\n%d", ft_printf("%d", 0));
+// 	return (0);
+// }

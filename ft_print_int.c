@@ -6,32 +6,29 @@
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 09:24:38 by adjelili          #+#    #+#             */
-/*   Updated: 2025/11/22 15:22:32 by adjelili         ###   ########.fr       */
+/*   Updated: 2025/11/22 18:08:11 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_count(int n)
+static void	ft_count(int n, int *count)
 {
-	int	count;
-
-	count = 0;
+	if (n < 0)
+		(*count)++;
 	while (n != 0)
 	{
 		n = n / 10;
-		count++;
+		(*count)++;
 	}
-	if (n < 0)
-		return (count + 2);
-	else
-		return (count + 1);
 }
 
 int	ft_print_int(int n)
 {
 	long	nb;
+	int		count;
 
+	count = 0;
 	nb = n;
 	if (nb == -2147483648)
 		ft_print_str("-2147483648");
@@ -48,15 +45,16 @@ int	ft_print_int(int n)
 	}
 	else
 		ft_print_char(nb + '0');
-	return (ft_count(n));
+	ft_count(n, &count);
+	return (count);
 }
 
-/*#include <stdio.h>
-int main(void)
-{
-	int n = 0;
-	//printf("%d", ft_print_int(n));
-	//ft_print_int(n);
-	printf("      %d", ft_print_int(n));
-	return (0);
-}*/
+// #include <stdio.h>
+// int main(void)
+// {
+// 	int n = 4;
+// 	//printf("%d", ft_print_int(n));
+// 	//ft_print_int(n);
+// 	printf("      %d", ft_print_int(n));
+// 	return (0);
+// }
