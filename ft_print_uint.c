@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_uint.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anis <anis@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/21 14:09:58 by adjelili          #+#    #+#             */
-/*   Updated: 2025/11/22 17:39:30 by adjelili         ###   ########.fr       */
+/*   Updated: 2025/11/22 21:41:27 by anis             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@ static int	ft_count(unsigned int n)
 	int	count;
 
 	count = 0;
+	if (n == 0)
+	{
+		count = 1;
+		return (count);
+	}
 	while (n != 0)
 	{
 		n = n / 10;
@@ -36,12 +41,3 @@ int	ft_print_uint(unsigned int n)
 		ft_print_char(n + '0');
 	return (ft_count(n));
 }
-
-/*#include <stdio.h>
-
-int main(void)
-{
-	printf("%u\n", ft_print_uint(-42));
-	printf("%u", -42);
-	return (0);
-}*/

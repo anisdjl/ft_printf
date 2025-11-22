@@ -3,24 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_int.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anis <anis@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 09:24:38 by adjelili          #+#    #+#             */
-/*   Updated: 2025/11/22 18:08:11 by adjelili         ###   ########.fr       */
+/*   Updated: 2025/11/22 21:24:04 by anis             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void	ft_count(int n, int *count)
+static int	ft_count(int n)
 {
+	int	count;
+
+	count = 0;
+	if (n == 0)
+	{
+		count = 1;
+		return (count);
+	}
 	if (n < 0)
-		(*count)++;
+		count++;
 	while (n != 0)
 	{
 		n = n / 10;
-		(*count)++;
+		count++;
 	}
+	return (count);
 }
 
 int	ft_print_int(int n)
@@ -45,8 +54,7 @@ int	ft_print_int(int n)
 	}
 	else
 		ft_print_char(nb + '0');
-	ft_count(n, &count);
-	return (count);
+	return (ft_count(n));
 }
 
 // #include <stdio.h>
