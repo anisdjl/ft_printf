@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anis <anis@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 09:39:01 by adjelili          #+#    #+#             */
-/*   Updated: 2025/11/22 22:09:42 by anis             ###   ########.fr       */
+/*   Updated: 2025/11/24 14:02:31 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int	ft_printf(const char *format, ...)
 	va_list	args;
 
 	va_start(args, format);
+	if (!format)
+		return (-1);
 	y = 0;
 	count = 0;
 	while (format[y])
@@ -42,7 +44,7 @@ int	ft_printf(const char *format, ...)
 /*#include <stdio.h>
 int main(void)
 {	
-	printf("%u %d %u %c %s\n");
-	ft_printf("%u %d %u %c %s");
+	printf("%%");
+	ft_printf("%%%%\n");
 	return (0);
 }*/

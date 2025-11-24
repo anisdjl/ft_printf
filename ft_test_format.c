@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_test_format.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anis <anis@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 10:40:41 by adjelili          #+#    #+#             */
-/*   Updated: 2025/11/22 22:02:38 by anis             ###   ########.fr       */
+/*   Updated: 2025/11/24 10:18:20 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,6 @@ int	ft_test_format(char c, va_list *args)
 		return (ft_print_ptr(va_arg(*args, void *)));
 	else
 	{
-		ft_print_char('%');
-		ft_print_char(c);
-		return (2);
+		return (-1);
 	}
 }
